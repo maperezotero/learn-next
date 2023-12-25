@@ -20,12 +20,12 @@ export async function fetchRevenue() {
     // Artificially delay a response for demo purposes.
     // Don't do this in production :)
 
-    console.log('Fetching revenue data...');  // remove in production
-    await new Promise((resolve) => setTimeout(resolve, 2000)); // remove in production
+    // console.log('Fetching revenue data...');  // remove in production
+    // await new Promise((resolve) => setTimeout(resolve, 2000)); // remove in production
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
 
-    console.log('Data fetch completed after 2 seconds.'); // remove in production
+    // console.log('Data fetch completed after 2 seconds.'); // remove in production
 
     return data.rows;
   } catch (error) {
